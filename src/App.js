@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Link } from 'react-router-dom';
 import Navigation from './Navigation'
 import Introduction from './Introduction'
 import { NormalDistribution, BinomialDistribution } from './distributions'
-import logo from './logo.svg';
+
 import './App.css';
 
 class App extends Component {
@@ -12,7 +12,7 @@ class App extends Component {
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <div className="App">
           <Navigation />
-          <div className="content">
+          <div className="Content">
             <Route exact path="/" component={Introduction} />
             <Route path="/normal/" component={NormalDistribution} />
             <Route path="/binomial/" component={BinomialDistribution} />

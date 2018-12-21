@@ -2,9 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
+import './Navigation.css'
+
 class Navigation extends React.Component {
   render () {
     return(
+      <nav className="Navigation">
       <ul>
         <li>
           <Link to='/'>Introduction</Link>
@@ -16,6 +19,7 @@ class Navigation extends React.Component {
           <Link to="/binomial/">Binomial distribution</Link>
         </li>
       </ul>
+    </nav>
 
     )
   }

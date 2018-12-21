@@ -1,0 +1,14 @@
+.Navigation a{
+text-decoration: none;
+}
+
+.Navigation li{
+  display: inline-block;
+  width: 100%;
+  padding-top: 4px;
+}
+
+.Navigation li:hover, .Navigation li:active{
+  color: #191919;
+  background-color: #323232;
+}
