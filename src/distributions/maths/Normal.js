@@ -3,9 +3,32 @@ import {range} from 'lodash'
 
 class NormalMaths {
   constructor(mean, sd) {
+    this.name = "Normal";
     this.mean = mean;
     this.sd = sd;
     this.variance = Math.pow(sd, 2);
+    this.parameters = [
+      {
+        name: "mean",
+        getter: this.getMean,
+        setter: this.setMean,
+
+      },
+      {
+        name: "sd",
+        getter: this.getSD,
+        setter: this.setSD,
+      }
+    ]
+  }
+
+  getMean = () => {
+    console.log(this.mean);
+    return this.mean;
+  }
+
+  getSD = () => {
+    return this.sd;
   }
 
   setMean = (mean) => {

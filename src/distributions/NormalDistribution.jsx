@@ -1,14 +1,25 @@
 import React, { Component } from 'react';
-import { DistributionName, Plot, Usage } from './distributioncomponents'
+import { DistributionName, DistributionControls, Plot, Usage } from './distributioncomponents'
 import {NormalMaths} from './maths'
 
 class NormalDistribution extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      distributions: [new NormalMaths(0, 1)]
+    }
+  }
+
   render() {
-    window.NormalMaths = NormalMaths
     return (
       <div>
         <DistributionName>Normal Distribution</DistributionName>
-        <Plot />
+        <Plot
+          distributions={this.state.distributions}
+          />
+        <DistributionControls
+          distributions={this.state.distributions}
+          />
         <Usage></Usage>
       </div>
     );
