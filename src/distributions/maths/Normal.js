@@ -12,18 +12,22 @@ class NormalMaths {
         name: "mean",
         getter: this.getMean,
         setter: this.setMean,
-
+        minval: -10,
+        maxval: 10,
+        step: 0.1
       },
       {
         name: "sd",
         getter: this.getSD,
         setter: this.setSD,
+        minval: 0,
+        maxval: 10,
+        step: 0.1,
       }
     ]
   }
 
   getMean = () => {
-    console.log(this.mean);
     return this.mean;
   }
 
